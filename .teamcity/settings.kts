@@ -42,6 +42,7 @@ object Build : BuildType({
 
     steps {
         dotnetBuild {
+            name = "Building the project"
             projects = "Challenge.sln"
             sdk = "7"
         }
