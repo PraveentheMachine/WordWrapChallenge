@@ -36,7 +36,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    vcs {
+    vcs {PraveentheMachine
         root(DslContext.settingsRoot)
     }
 
@@ -47,6 +47,7 @@ object Build : BuildType({
             sdk = "7"
         }
         dotnetTest {
+            name = "Test the project"
             projects = "WrapTests/WrapTests.csproj"
             sdk = "7"
         }
