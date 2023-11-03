@@ -8,7 +8,7 @@ public class WordWrapChallenge
     {
         if (length <= 0)
         {
-            throw new ArgumentException($"The provided value was {length} is a non positive number");
+            throw new ArgumentException($"The provided value was {length} which is a non positive number");
         }
 
         if (message.Length < length)
