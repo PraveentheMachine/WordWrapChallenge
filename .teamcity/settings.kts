@@ -69,7 +69,7 @@ object Test : BuildType({
 
     steps {
         dotnetTest {
-            name = "Test the project"
+            name = "Run unit tests"
             projects = "WrapTests/WrapTests.csproj"
             sdk = "7"
         }
