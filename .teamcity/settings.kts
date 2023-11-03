@@ -41,7 +41,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    vcs {PraveentheMachine
+    vcs {
         root(DslContext.settingsRoot)
     }
 
@@ -63,7 +63,7 @@ object Build : BuildType({
 object Test : BuildType({
     name = "Test"
 
-    vcs {PraveentheMachine
+    vcs {
         root(DslContext.settingsRoot)
     }
 
