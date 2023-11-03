@@ -31,6 +31,12 @@ version = "2023.05"
 project {
 
     buildType(Build)
+    buildType(Test)
+
+    sequential{
+        buildType(Build)
+        buildType(Test)
+    }
 }
 
 object Build : BuildType({
@@ -46,11 +52,35 @@ object Build : BuildType({
             projects = "Challenge.sln"
             sdk = "7"
         }
+    }
+
+    features {
+
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object Test : BuildType({
+    name = "Test"
+
+    vcs {PraveentheMachine
+        root(DslContext.settingsRoot)
+    }
+
+    steps {
         dotnetTest {
             name = "Test the project"
             projects = "WrapTests/WrapTests.csproj"
             sdk = "7"
         }
+    }
+
+    features {
+
     }
 
     triggers {
